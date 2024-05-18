@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED32BEE597B009A6365 /* AppDelegate.swift */; };
 		B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */; };
-		B1E9BED82BEE597B009A6365 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED72BEE597B009A6365 /* ViewController.swift */; };
-		B1E9BEDB2BEE597B009A6365 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B1E9BEDA2BEE597B009A6365 /* Base */; };
 		B1E9BEDD2BEE597D009A6365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */; };
 		B1E9BEE02BEE597D009A6365 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B1E9BEDF2BEE597D009A6365 /* Base */; };
 		B1E9BEEB2BEE597D009A6365 /* DailyTodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BEEA2BEE597D009A6365 /* DailyTodoTests.swift */; };
 		B1E9BEF52BEE597D009A6365 /* DailyTodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BEF42BEE597D009A6365 /* DailyTodoUITests.swift */; };
 		B1E9BEF72BEE597D009A6365 /* DailyTodoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BEF62BEE597D009A6365 /* DailyTodoUITestsLaunchTests.swift */; };
+		B1EC82562BF89A2200556A22 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC82552BF89A2200556A22 /* MainViewController.swift */; };
+		B1EC82592BF89A5000556A22 /* UILayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC82582BF89A5000556A22 /* UILayoutable.swift */; };
+		B1EC825B2BF89C3900556A22 /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = B1EC825A2BF89C3900556A22 /* Documentation.docc */; };
+		B1EC825E2BF89F4900556A22 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = B1EC825D2BF89F4900556A22 /* ReactorKit */; };
+		B1EC82612BF89F5800556A22 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = B1EC82602BF89F5800556A22 /* Then */; };
+		B1EC82642BF89F6500556A22 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1EC82632BF89F6500556A22 /* FlexLayout */; };
+		B1EC82672BF89F7100556A22 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = B1EC82662BF89F7100556A22 /* PinLayout */; };
+		B1EC82692BF8A1AF00556A22 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC82682BF8A1AF00556A22 /* BaseViewController.swift */; };
+		B1EC826B2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */; };
+		B1EC826D2BF8A81C00556A22 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC826C2BF8A81C00556A22 /* TagView.swift */; };
+		B1EC826F2BF8AE6200556A22 /* TodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		B1E9BED02BEE597B009A6365 /* DailyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E9BED32BEE597B009A6365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B1E9BED72BEE597B009A6365 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B1E9BEDA2BEE597B009A6365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1E9BEDF2BEE597D009A6365 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1E9BEE12BEE597D009A6365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		B1E9BEF02BEE597D009A6365 /* DailyTodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyTodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E9BEF42BEE597D009A6365 /* DailyTodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTodoUITests.swift; sourceTree = "<group>"; };
 		B1E9BEF62BEE597D009A6365 /* DailyTodoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTodoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1EC82552BF89A2200556A22 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B1EC82582BF89A5000556A22 /* UILayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILayoutable.swift; sourceTree = "<group>"; };
+		B1EC825A2BF89C3900556A22 /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		B1EC82682BF8A1AF00556A22 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityCardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1EC826C2BF8A81C00556A22 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EC82642BF89F6500556A22 /* FlexLayout in Frameworks */,
+				B1EC825E2BF89F4900556A22 /* ReactorKit in Frameworks */,
+				B1EC82672BF89F7100556A22 /* PinLayout in Frameworks */,
+				B1EC82612BF89F5800556A22 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +117,10 @@
 		B1E9BED22BEE597B009A6365 /* DailyTodo */ = {
 			isa = PBXGroup;
 			children = (
-				B1E9BED32BEE597B009A6365 /* AppDelegate.swift */,
-				B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */,
-				B1E9BED72BEE597B009A6365 /* ViewController.swift */,
-				B1E9BED92BEE597B009A6365 /* Main.storyboard */,
-				B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */,
-				B1E9BEDE2BEE597D009A6365 /* LaunchScreen.storyboard */,
-				B1E9BEE12BEE597D009A6365 /* Info.plist */,
+				B1EC82572BF89A4400556A22 /* Common */,
+				B1E9BF032BEE59F5009A6365 /* App */,
+				B1EC82532BF898F100556A22 /* Feature */,
+				B1E9BF042BEE59FD009A6365 /* Support */,
 			);
 			path = DailyTodo;
 			sourceTree = "<group>";
@@ -127,6 +142,62 @@
 			path = DailyTodoUITests;
 			sourceTree = "<group>";
 		};
+		B1E9BF032BEE59F5009A6365 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B1E9BED32BEE597B009A6365 /* AppDelegate.swift */,
+				B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B1E9BF042BEE59FD009A6365 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */,
+				B1E9BEDE2BEE597D009A6365 /* LaunchScreen.storyboard */,
+				B1E9BEE12BEE597D009A6365 /* Info.plist */,
+				B1EC825A2BF89C3900556A22 /* Documentation.docc */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B1EC82532BF898F100556A22 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC82542BF899FF00556A22 /* Main */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B1EC82542BF899FF00556A22 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC82552BF89A2200556A22 /* MainViewController.swift */,
+				B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */,
+				B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B1EC82572BF89A4400556A22 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC82702BF8B10200556A22 /* CustomView */,
+				B1EC82582BF89A5000556A22 /* UILayoutable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B1EC82702BF8B10200556A22 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC826C2BF8A81C00556A22 /* TagView.swift */,
+				B1EC82682BF8A1AF00556A22 /* BaseViewController.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +214,12 @@
 			dependencies = (
 			);
 			name = DailyTodo;
+			packageProductDependencies = (
+				B1EC825D2BF89F4900556A22 /* ReactorKit */,
+				B1EC82602BF89F5800556A22 /* Then */,
+				B1EC82632BF89F6500556A22 /* FlexLayout */,
+				B1EC82662BF89F7100556A22 /* PinLayout */,
+			);
 			productName = DailyTodo;
 			productReference = B1E9BED02BEE597B009A6365 /* DailyTodo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +292,12 @@
 				Base,
 			);
 			mainGroup = B1E9BEC72BEE597B009A6365;
+			packageReferences = (
+				B1EC825C2BF89F4900556A22 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				B1EC825F2BF89F5800556A22 /* XCRemoteSwiftPackageReference "Then" */,
+				B1EC82622BF89F6500556A22 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+				B1EC82652BF89F7100556A22 /* XCRemoteSwiftPackageReference "PinLayout" */,
+			);
 			productRefGroup = B1E9BED12BEE597B009A6365 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +316,6 @@
 			files = (
 				B1E9BEDD2BEE597D009A6365 /* Assets.xcassets in Resources */,
 				B1E9BEE02BEE597D009A6365 /* Base in Resources */,
-				B1E9BEDB2BEE597B009A6365 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +340,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1E9BED82BEE597B009A6365 /* ViewController.swift in Sources */,
+				B1EC826B2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift in Sources */,
+				B1EC82562BF89A2200556A22 /* MainViewController.swift in Sources */,
+				B1EC82592BF89A5000556A22 /* UILayoutable.swift in Sources */,
 				B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */,
+				B1EC825B2BF89C3900556A22 /* Documentation.docc in Sources */,
 				B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */,
+				B1EC82692BF8A1AF00556A22 /* BaseViewController.swift in Sources */,
+				B1EC826F2BF8AE6200556A22 /* TodoCollectionViewCell.swift in Sources */,
+				B1EC826D2BF8A81C00556A22 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B1E9BED92BEE597B009A6365 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B1E9BEDA2BEE597B009A6365 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B1E9BEDE2BEE597D009A6365 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,18 +524,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Q2ZLM39JN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DailyTodo/Info.plist;
+				INFOPLIST_FILE = DailyTodo/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team.nunu.app.DailyTodo;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.nunu.app.dailyTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -472,18 +553,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Q2ZLM39JN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DailyTodo/Info.plist;
+				INFOPLIST_FILE = DailyTodo/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = team.nunu.app.DailyTodo;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.nunu.app.dailyTodo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,6 +689,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1EC825C2BF89F4900556A22 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		B1EC825F2BF89F5800556A22 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		B1EC82622BF89F6500556A22 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.7;
+			};
+		};
+		B1EC82652BF89F7100556A22 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1EC825D2BF89F4900556A22 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EC825C2BF89F4900556A22 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		B1EC82602BF89F5800556A22 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EC825F2BF89F5800556A22 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		B1EC82632BF89F6500556A22 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EC82622BF89F6500556A22 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+		};
+		B1EC82662BF89F7100556A22 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EC82652BF89F7100556A22 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1E9BEC82BEE597B009A6365 /* Project object */;
 }
