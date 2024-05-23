@@ -39,6 +39,7 @@ public final class MainViewController: BaseViewController {
         frame: .zero,
         collectionViewLayout: makeCompositionalLayout()
     ).then {
+        $0.showsVerticalScrollIndicator = false
         $0.register(
             TodoCollectionViewCell.self,
             forCellWithReuseIdentifier: "TodoCollectionViewCell"
@@ -52,7 +53,7 @@ public final class MainViewController: BaseViewController {
     
     //FIXME: 제거예정
     private var list: [String] = {
-        return (0...100).map { "Todo \($0)" }
+        return (0...10).map { "Todo \($0)" }
     }()
     
     public override func viewDidLoad() {
@@ -81,8 +82,7 @@ public final class MainViewController: BaseViewController {
                     
                 }
             
-            //FIXME: 동적 변환 예정
-            flex.addItem(collectionView).height(500)
+            flex.addItem(collectionView).grow(1)
         }
     }
     
@@ -90,7 +90,7 @@ public final class MainViewController: BaseViewController {
         super.viewDidLayoutSubviews()
         
         rootFlexContainer.pin.all(view.pin.safeArea)
-        rootFlexContainer.flex.layout(mode: .adjustHeight)
+        rootFlexContainer.flex.layout()
     }
 }
 
@@ -118,8 +118,7 @@ private extension MainViewController {
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: groupSize,
-            subitem: item,
-            count: 1
+            subitems: [item]
         )
         
         let section = NSCollectionLayoutSection(group: group)
@@ -202,6 +201,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 for: indexPath
             ) as! PriorityCardCollectionViewCell
             return cell
+            
         default:
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: "TodoCollectionViewCell",

@@ -24,6 +24,9 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
     }
     
     private let tagView = TagView()
+    private let tagView1 = TagView()
+    private let tagView2 = TagView()
+    private let tagView3 = TagView()
     
     private let tagContainerStackView = UIStackView().then {
         $0.axis = .horizontal
@@ -31,10 +34,7 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
         $0.spacing = 11
     }
     
-    private let priorityLabel = UILabel().then {
-        $0.text = "✨ 우선순위: 낮음"
-        $0.font = UIFont.systemFont(ofSize: 10, weight: .heavy)
-    }
+    private let priorityGraph = GraphView()
     
     private let completeLabel = UILabel().then {
         $0.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
@@ -50,14 +50,27 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
         addSubview(completeLabel)
         
         tagContainerStackView.addArrangedSubview(tagView)
+        tagContainerStackView.addArrangedSubview(tagView1)
+        tagContainerStackView.addArrangedSubview(tagView2)
+        tagContainerStackView.addArrangedSubview(tagView3)
         
         rootFlexContainer.flex.direction(.column)
-            .justifyContent(.spaceEvenly)
+            .justifyContent(.center)
             .padding(10)
             .define { flex in
-                flex.addItem(titleLabel)
-                flex.addItem(tagContainerStackView).height(16).width(40)
-                flex.addItem(priorityLabel)
+                
+                flex.addItem()
+                    .justifyContent(.spaceBetween)
+                    .direction(.row)
+                    .marginBottom(10)
+                    .define { flex in
+                        flex.addItem(titleLabel)
+                        flex.addItem(priorityGraph)
+                            .height(20)
+                    }
+                
+                flex.addItem(tagContainerStackView).height(20)
+                
             }
     }
     
@@ -67,6 +80,17 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
+        
+        tagContainerStackView.pin
+            .top()
+            .after(of: titleLabel)
+            .height(16)
+        
+        priorityGraph.pin
+            .top(10)
+            .after(of: tagContainerStackView)
+            .height(20)
+        
         completeLabel.pin.all()
         rootFlexContainer.pin.all()
         rootFlexContainer.flex.layout()
@@ -74,6 +98,6 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
 }
 //MARK: - Preview
 @available(iOS 17.0, *)
-#Preview("할일 카드 셀", traits: .fixedLayout(width: 414, height: 80), body: {
+#Preview("할일 카드 셀", traits: .fixedLayout(width: 414, height: 100), body: {
     TodoCollectionViewCell()
 })

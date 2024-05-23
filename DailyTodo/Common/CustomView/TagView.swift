@@ -25,20 +25,18 @@ public final class TagView: UIView {
         super.init(frame: frame)
         addSubview(rootFlexContainerView)
         
-        
         rootFlexContainerView.flex
             .justifyContent(.center)
             .alignItems(.center)
-            .direction(.column)
             .define { flex in
-            flex.addItem(tagLabel)
-        }
-        
+                flex.addItem(tagLabel)
+            }
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
         rootFlexContainerView.pin.all()
+        rootFlexContainerView.pin.size(CGSize(width: 40, height: 16))
         rootFlexContainerView.flex.layout()
     }
     
@@ -49,6 +47,6 @@ public final class TagView: UIView {
 }
 
 @available(iOS 17.0, *)
-#Preview("태그 화면", traits: .fixedLayout(width: 70, height: 30), body: {
+#Preview("태그 화면", traits: .fixedLayout(width: 40, height: 16), body: {
     TagView()
 })

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B14174C72BFF2A9C00CC9F1F /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14174C62BFF2A9C00CC9F1F /* TodoModel.swift */; };
+		B14174C92BFF2B7600CC9F1F /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14174C82BFF2B7600CC9F1F /* TagModel.swift */; };
 		B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED32BEE597B009A6365 /* AppDelegate.swift */; };
 		B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */; };
 		B1E9BEDD2BEE597D009A6365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */; };
@@ -25,6 +27,7 @@
 		B1EC826B2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */; };
 		B1EC826D2BF8A81C00556A22 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC826C2BF8A81C00556A22 /* TagView.swift */; };
 		B1EC826F2BF8AE6200556A22 /* TodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */; };
+		B1EC82722BF8EC1E00556A22 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EC82712BF8EC1E00556A22 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B14174C62BFF2A9C00CC9F1F /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		B14174C82BFF2B7600CC9F1F /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
 		B1E9BED02BEE597B009A6365 /* DailyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E9BED32BEE597B009A6365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1EC826C2BF8A81C00556A22 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B1EC82712BF8EC1E00556A22 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B14174C42BFF2A6B00CC9F1F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC82552BF89A2200556A22 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B14174C52BFF2A7400CC9F1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */,
+				B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B14174CA2BFF2FEF00CC9F1F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B14174C82BFF2B7600CC9F1F /* TagModel.swift */,
+				B14174C62BFF2A9C00CC9F1F /* TodoModel.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B1E9BEC72BEE597B009A6365 = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +149,9 @@
 		B1E9BED22BEE597B009A6365 /* DailyTodo */ = {
 			isa = PBXGroup;
 			children = (
-				B1EC82572BF89A4400556A22 /* Common */,
 				B1E9BF032BEE59F5009A6365 /* App */,
+				B1EC82572BF89A4400556A22 /* Common */,
+				B14174CA2BFF2FEF00CC9F1F /* Data */,
 				B1EC82532BF898F100556A22 /* Feature */,
 				B1E9BF042BEE59FD009A6365 /* Support */,
 			);
@@ -173,9 +206,8 @@
 		B1EC82542BF899FF00556A22 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B1EC82552BF89A2200556A22 /* MainViewController.swift */,
-				B1EC826A2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift */,
-				B1EC826E2BF8AE6200556A22 /* TodoCollectionViewCell.swift */,
+				B14174C52BFF2A7400CC9F1F /* View */,
+				B14174C42BFF2A6B00CC9F1F /* ViewController */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -194,6 +226,7 @@
 			children = (
 				B1EC826C2BF8A81C00556A22 /* TagView.swift */,
 				B1EC82682BF8A1AF00556A22 /* BaseViewController.swift */,
+				B1EC82712BF8EC1E00556A22 /* GraphView.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -340,11 +373,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B14174C92BFF2B7600CC9F1F /* TagModel.swift in Sources */,
 				B1EC826B2BF8A78300556A22 /* PriorityCardCollectionViewCell.swift in Sources */,
 				B1EC82562BF89A2200556A22 /* MainViewController.swift in Sources */,
 				B1EC82592BF89A5000556A22 /* UILayoutable.swift in Sources */,
+				B14174C72BFF2A9C00CC9F1F /* TodoModel.swift in Sources */,
 				B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */,
 				B1EC825B2BF89C3900556A22 /* Documentation.docc in Sources */,
+				B1EC82722BF8EC1E00556A22 /* GraphView.swift in Sources */,
 				B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */,
 				B1EC82692BF8A1AF00556A22 /* BaseViewController.swift in Sources */,
 				B1EC826F2BF8AE6200556A22 /* TodoCollectionViewCell.swift in Sources */,
@@ -530,7 +566,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +595,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
