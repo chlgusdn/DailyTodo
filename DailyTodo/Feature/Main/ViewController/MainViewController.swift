@@ -42,7 +42,7 @@ public final class MainViewController: BaseViewController {
         $0.showsVerticalScrollIndicator = false
         $0.register(
             TodoCollectionViewCell.self,
-            forCellWithReuseIdentifier: "TodoCollectionViewCell"
+            forCellWithReuseIdentifier: TodoCollectionViewCell.identifier
         )
         
         $0.register(

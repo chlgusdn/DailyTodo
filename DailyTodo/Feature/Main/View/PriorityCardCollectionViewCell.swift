@@ -7,7 +7,13 @@
 
 import UIKit
 
-public final class PriorityCardCollectionViewCell: UICollectionViewCell {
+public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellConfigureable {
+    
+    public typealias T = String
+    
+    public static var identifier: String {
+        return String(describing: self)
+    }
     
     private let rootFlexContainer = UIView().then {
         $0.layer.cornerRadius = 16
@@ -64,6 +70,7 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell {
         rootFlexContainer.flex.layout()
     }
     
+    public func configure(data: String) {}
 }
 
 

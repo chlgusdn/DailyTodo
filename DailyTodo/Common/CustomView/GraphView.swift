@@ -21,6 +21,11 @@ public final class GraphView: UIView {
         }
     }()
     
+    public init(count: Int) {
+        super.init(frame: .zero)
+        
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         

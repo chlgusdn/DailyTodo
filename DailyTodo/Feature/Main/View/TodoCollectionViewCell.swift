@@ -7,7 +7,13 @@
 
 import UIKit
 
-public final class TodoCollectionViewCell: UICollectionViewCell {
+public final class TodoCollectionViewCell: UICollectionViewCell, CellConfigureable {
+    public typealias T = String
+    
+    public static var identifier: String {
+        return String(describing: self)
+    }
+    
     private let rootFlexContainer = UIView().then {
         $0.layer.cornerRadius = 16
         $0.layer.shadowOpacity = 0.2
@@ -23,17 +29,6 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
         $0.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
     }
     
-    private let tagView = TagView()
-    private let tagView1 = TagView()
-    private let tagView2 = TagView()
-    private let tagView3 = TagView()
-    
-    private let tagContainerStackView = UIStackView().then {
-        $0.axis = .horizontal
-        $0.distribution = .fillEqually
-        $0.spacing = 11
-    }
-    
     private let priorityGraph = GraphView()
     
     private let completeLabel = UILabel().then {
@@ -43,16 +38,16 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
         $0.textAlignment = .center
     }
     
+    // FIXME: 변경예정
+    private var count: Int {
+        return 4
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
         addSubview(rootFlexContainer)
         addSubview(completeLabel)
-        
-        tagContainerStackView.addArrangedSubview(tagView)
-        tagContainerStackView.addArrangedSubview(tagView1)
-        tagContainerStackView.addArrangedSubview(tagView2)
-        tagContainerStackView.addArrangedSubview(tagView3)
         
         rootFlexContainer.flex.direction(.column)
             .justifyContent(.center)
@@ -62,15 +57,22 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
                 flex.addItem()
                     .justifyContent(.spaceBetween)
                     .direction(.row)
-                    .marginBottom(10)
+                    .marginBottom(12)
                     .define { flex in
                         flex.addItem(titleLabel)
                         flex.addItem(priorityGraph)
-                            .height(20)
                     }
                 
-                flex.addItem(tagContainerStackView).height(20)
-                
+                flex.addItem()
+                    .direction(.row)
+                    .define { flex in
+                        (1...self.count).forEach { _ in
+                            let tagView = TagView()
+                            flex.addItem(tagView)
+                                .marginRight(4)
+                                .width(40)
+                        }
+                    }
             }
     }
     
@@ -81,20 +83,24 @@ public final class TodoCollectionViewCell: UICollectionViewCell {
     public override func layoutSubviews() {
         super.layoutSubviews()
         
-        tagContainerStackView.pin
-            .top()
-            .after(of: titleLabel)
-            .height(16)
+        titleLabel
+            .pin
+            .topLeft(to: rootFlexContainer.anchor.topLeft)
         
-        priorityGraph.pin
-            .top(10)
-            .after(of: tagContainerStackView)
+        priorityGraph
+            .pin
+            .topRight(to: rootFlexContainer.anchor.topRight)
             .height(20)
         
         completeLabel.pin.all()
         rootFlexContainer.pin.all()
         rootFlexContainer.flex.layout()
     }
+    
+    public func configure(data: String) {
+        
+    }
+    
 }
 //MARK: - Preview
 @available(iOS 17.0, *)

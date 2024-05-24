@@ -35,7 +35,6 @@ public final class TagView: UIView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        rootFlexContainerView.pin.all()
         rootFlexContainerView.pin.size(CGSize(width: 40, height: 16))
         rootFlexContainerView.flex.layout()
     }

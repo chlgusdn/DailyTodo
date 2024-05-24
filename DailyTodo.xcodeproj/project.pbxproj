@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10838DF2C0089BE00F708FF /* CellConfigureable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10838DE2C0089BE00F708FF /* CellConfigureable.swift */; };
 		B14174C72BFF2A9C00CC9F1F /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14174C62BFF2A9C00CC9F1F /* TodoModel.swift */; };
 		B14174C92BFF2B7600CC9F1F /* TagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14174C82BFF2B7600CC9F1F /* TagModel.swift */; };
 		B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED32BEE597B009A6365 /* AppDelegate.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B10838DE2C0089BE00F708FF /* CellConfigureable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigureable.swift; sourceTree = "<group>"; };
 		B14174C62BFF2A9C00CC9F1F /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		B14174C82BFF2B7600CC9F1F /* TagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagModel.swift; sourceTree = "<group>"; };
 		B1E9BED02BEE597B009A6365 /* DailyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +219,7 @@
 			children = (
 				B1EC82702BF8B10200556A22 /* CustomView */,
 				B1EC82582BF89A5000556A22 /* UILayoutable.swift */,
+				B10838DE2C0089BE00F708FF /* CellConfigureable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				B1EC825B2BF89C3900556A22 /* Documentation.docc in Sources */,
 				B1EC82722BF8EC1E00556A22 /* GraphView.swift in Sources */,
 				B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */,
+				B10838DF2C0089BE00F708FF /* CellConfigureable.swift in Sources */,
 				B1EC82692BF8A1AF00556A22 /* BaseViewController.swift in Sources */,
 				B1EC826F2BF8AE6200556A22 /* TodoCollectionViewCell.swift in Sources */,
 				B1EC826D2BF8A81C00556A22 /* TagView.swift in Sources */,
