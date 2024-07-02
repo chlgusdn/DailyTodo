@@ -10,13 +10,13 @@ import UIKit
 /// 할일 태그화면
 public final class TagView: UIView {
 
-    public let rootFlexContainerView = UIView().then {
+    private let rootFlexContainerView = UIView().then {
         $0.backgroundColor = .main
         $0.layer.cornerRadius = 8
         $0.layer.masksToBounds = true
     }
     
-    public let tagLabel = UILabel().then {
+    private let tagLabel = UILabel().then {
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 8, weight: .heavy)
         $0.text = "개인"
