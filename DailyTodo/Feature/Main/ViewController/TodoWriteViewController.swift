@@ -23,6 +23,7 @@ public final class TodoWriteViewController: BaseViewController {
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
         $0.backgroundColor = .contentBackground
+        $0.addLeftPadding(padding: 10)
     }
     
     /// 내용 Prefix 레이블
