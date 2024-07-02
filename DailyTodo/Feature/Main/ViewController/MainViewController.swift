@@ -63,7 +63,7 @@ public final class MainViewController: BaseViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(rootFlexContainer)
-        setSearchController()
+        
         rootFlexContainer.flex.direction(.column).define { flex in
             
             flex.addItem()

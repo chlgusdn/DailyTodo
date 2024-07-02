@@ -18,21 +18,11 @@ open class BaseViewController: UIViewController, UISearchResultsUpdating {
         
     }
     
-
     /// FlexLayout을 사용하기 위한 루트 컨테이너 뷰
     public let rootFlexContainer = UIView()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
         definesPresentationContext = false
-    }
-    
-    open func setSearchController() {
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
-        self.navigationItem.hidesSearchBarWhenScrolling = true
-        self.navigationItem.searchController = searchController
     }
 }
