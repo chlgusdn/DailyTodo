@@ -12,13 +12,13 @@ public final class TodoWriteViewController: BaseViewController {
     
     /// 제목 Prefix 레이블
     private let titleLabel = UILabel().then {
-        $0.font = UIFont.boldSystemFont(ofSize: 20)
+        $0.font = FontDesign.title20blod
         $0.text = "제목"
     }
     
     /// 제못을 적을 수 있는 텍스트 필드
     private let titleTextField = UITextField().then {
-        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.font = FontDesign.content14general
         $0.placeholder = "제목을 입력해주세요"
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
@@ -28,13 +28,13 @@ public final class TodoWriteViewController: BaseViewController {
     
     /// 내용 Prefix 레이블
     private let contentLabel = UILabel().then {
-        $0.font = UIFont.boldSystemFont(ofSize: 20)
+        $0.font = FontDesign.title20blod
         $0.text = "내용"
     }
     
     /// 내용을 적을 수 있는 텍스트 뷰
     private let contentTextView = UITextView().then {
-        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.font = FontDesign.content14general
         $0.layer.cornerRadius = 10
         $0.layer.masksToBounds = true
         $0.backgroundColor = .contentBackground
@@ -42,7 +42,7 @@ public final class TodoWriteViewController: BaseViewController {
     
     /// 태그 Prefix 레이블
     private let tagLabel = UILabel().then {
-        $0.font = UIFont.boldSystemFont(ofSize: 20)
+        $0.font = FontDesign.title20blod
         $0.text = "태그"
     }
     

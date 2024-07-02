@@ -27,13 +27,13 @@ public final class TodoCollectionViewCell: UICollectionViewCell, CellConfigureab
     
     private let titleLabel = UILabel().then {
         $0.text = "✏️ 일본어 공부하기"
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
+        $0.font = FontDesign.content10heavy
     }
     
     private let priorityGraph = GraphView()
     
     private let completeLabel = UILabel().then {
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .heavy)
+        $0.font = FontDesign.content20heavy
         $0.textColor = .transparentBlack
         $0.text = "완료했습니다"
         $0.textAlignment = .center

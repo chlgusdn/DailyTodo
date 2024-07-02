@@ -13,6 +13,7 @@
 		B16F5CB02C328A97002E286E /* TodoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F5CAF2C328A97002E286E /* TodoWriteViewController.swift */; };
 		B1BAEFC52C344A4B004A16D5 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BAEFC42C344A4B004A16D5 /* UITextField+Ext.swift */; };
 		B1BAEFC72C345041004A16D5 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BAEFC62C345041004A16D5 /* EmptyView.swift */; };
+		B1BAEFC92C3459A5004A16D5 /* FontDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BAEFC82C3459A5004A16D5 /* FontDesign.swift */; };
 		B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED32BEE597B009A6365 /* AppDelegate.swift */; };
 		B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */; };
 		B1E9BEDD2BEE597D009A6365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		B16F5CAF2C328A97002E286E /* TodoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoWriteViewController.swift; sourceTree = "<group>"; };
 		B1BAEFC42C344A4B004A16D5 /* UITextField+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Ext.swift"; sourceTree = "<group>"; };
 		B1BAEFC62C345041004A16D5 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B1BAEFC82C3459A5004A16D5 /* FontDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDesign.swift; sourceTree = "<group>"; };
 		B1E9BED02BEE597B009A6365 /* DailyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E9BED32BEE597B009A6365 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				B1EC82582BF89A5000556A22 /* UILayoutable.swift */,
 				B10838DE2C0089BE00F708FF /* CellConfigureable.swift */,
 				B1BAEFC42C344A4B004A16D5 /* UITextField+Ext.swift */,
+				B1BAEFC82C3459A5004A16D5 /* FontDesign.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				B16F5CB02C328A97002E286E /* TodoWriteViewController.swift in Sources */,
 				B1BAEFC72C345041004A16D5 /* EmptyView.swift in Sources */,
 				B1EC82562BF89A2200556A22 /* MainViewController.swift in Sources */,
+				B1BAEFC92C3459A5004A16D5 /* FontDesign.swift in Sources */,
 				B1EC82592BF89A5000556A22 /* UILayoutable.swift in Sources */,
 				B14174C72BFF2A9C00CC9F1F /* TodoModel.swift in Sources */,
 				B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */,

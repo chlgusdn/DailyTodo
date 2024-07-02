@@ -15,12 +15,12 @@ final class EmptyView: UIView {
     private let titleLabel = UILabel().then {
         $0.text = "할일을 만들어 볼까요 ?"
         $0.textAlignment = .center
-        $0.font = UIFont.boldSystemFont(ofSize: 20)
+        $0.font = FontDesign.title20blod
     }
     
     private let todoCreateLabel = UILabel().then {
         $0.text = "만들기"
-        $0.font = .boldSystemFont(ofSize: 14)
+        $0.font = FontDesign.content14bold
         $0.textColor = .white
         $0.textAlignment = .center
         $0.layer.cornerRadius = 16

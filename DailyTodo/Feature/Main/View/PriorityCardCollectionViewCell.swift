@@ -30,7 +30,7 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellCon
     /// 할일 제목 레이블
     private let titleLabel = UILabel().then {
         $0.text = "일본어 공부하기"
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
+        $0.font = FontDesign.subTitle14heavy
     }
     
     /// 태그 화면
@@ -39,7 +39,7 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellCon
     /// 리마인더 레이블
     private let reminderLabel = UILabel().then {
         $0.text = "⏰ 오전 12시 30분"
-        $0.font = UIFont.systemFont(ofSize: 10, weight: .heavy)
+        $0.font = FontDesign.content10heavy
     }
     
     public override init(frame: CGRect) {

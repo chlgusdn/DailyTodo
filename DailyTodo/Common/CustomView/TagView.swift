@@ -18,7 +18,7 @@ public final class TagView: UIView {
     
     private let tagLabel = UILabel().then {
         $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 8, weight: .heavy)
+        $0.font = FontDesign.content8heavy
         $0.text = "개인"
     }
     

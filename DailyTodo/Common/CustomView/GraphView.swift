@@ -18,7 +18,7 @@ public final class GraphView: UIView {
         return (0...2).map { index in
             var cellView = UILabel().then {
                 $0.text = "⭐️"
-                $0.font = UIFont.systemFont(ofSize: 10)
+                $0.font = FontDesign.content10general
             }
             
             return cellView

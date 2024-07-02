@@ -14,20 +14,20 @@ public final class MainViewController: BaseViewController {
     private var titleLabel = UILabel().then {
         $0.text = "오늘의 진척도"
         $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        $0.font = FontDesign.title30heavy
     }
     /// '오늘 할일이 N개 남았습니다'  내용 레이블
     private var subTitleLabel = UILabel().then {
         $0.text = "오늘 할일이 N개 남았습니다."
         $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
+        $0.font = FontDesign.subTitle14heavy
     }
     /// 진척도 퍼센테이지 레이블
     private var percentageLabel = UILabel().then {
         $0.text = "70 %"
         $0.textColor = .black
         $0.textAlignment = .right
-        $0.font = UIFont.systemFont(ofSize: 50, weight: .heavy)
+        $0.font = FontDesign.content50heavy
     }
     /// 진척도 프로그래스바
     private var progressView = UIProgressView().then {
