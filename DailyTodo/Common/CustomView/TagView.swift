@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 할일 태그화면
 public final class TagView: UIView {
 
     public let rootFlexContainerView = UIView().then {
@@ -21,16 +22,14 @@ public final class TagView: UIView {
         $0.text = "개인"
     }
     
+    public init(color: UIColor) {
+        super.init(frame: .zero)
+        setUpUI()
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(rootFlexContainerView)
-        
-        rootFlexContainerView.flex
-            .justifyContent(.center)
-            .alignItems(.center)
-            .define { flex in
-                flex.addItem(tagLabel)
-            }
+        setUpUI()
     }
     
     public override func layoutSubviews() {
@@ -45,6 +44,24 @@ public final class TagView: UIView {
     
 }
 
+//MARK: - Private Method
+private extension TagView {
+    
+    /// 뷰에 대한 UI를 설정해주는 함수
+    func setUpUI() {
+        addSubview(rootFlexContainerView)
+        
+        rootFlexContainerView.flex
+            .justifyContent(.center)
+            .alignItems(.center)
+            .define { flex in
+                flex.addItem(tagLabel)
+            }
+    }
+    
+}
+
+// MARK: - PreView
 @available(iOS 17.0, *)
 #Preview("태그 화면", traits: .fixedLayout(width: 40, height: 16), body: {
     TagView()

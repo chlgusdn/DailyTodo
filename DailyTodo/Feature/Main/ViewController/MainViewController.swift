@@ -10,31 +10,32 @@ import UIKit
 /// Main화면에 대한 ViewController 클래스 입니다.
 public final class MainViewController: BaseViewController {
 
+    /// '오늘의 진척도' 제목 레이블
     private var titleLabel = UILabel().then {
         $0.text = "오늘의 진척도"
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
     }
-    
+    /// '오늘 할일이 N개 남았습니다'  내용 레이블
     private var subTitleLabel = UILabel().then {
         $0.text = "오늘 할일이 N개 남았습니다."
         $0.textColor = .black
         $0.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
     }
-    
+    /// 진척도 퍼센테이지 레이블
     private var percentageLabel = UILabel().then {
         $0.text = "70 %"
         $0.textColor = .black
         $0.textAlignment = .right
         $0.font = UIFont.systemFont(ofSize: 50, weight: .heavy)
     }
-    
+    /// 진척도 프로그래스바
     private var progressView = UIProgressView().then {
         $0.progress = 0.7
         $0.tintColor = .main
         $0.trackTintColor = .enable
     }
-    
+    /// 뷰를 그리기 위한 콜렉션 뷰
     private lazy var collectionView = UICollectionView(
         frame: .zero,
         collectionViewLayout: makeCompositionalLayout()
@@ -47,7 +48,7 @@ public final class MainViewController: BaseViewController {
         
         $0.register(
             PriorityCardCollectionViewCell.self,
-            forCellWithReuseIdentifier: "PriorityCardCollectionViewCell"
+            forCellWithReuseIdentifier: PriorityCardCollectionViewCell.identifier
         )
     }
     
@@ -56,12 +57,13 @@ public final class MainViewController: BaseViewController {
         return (0...10).map { "Todo \($0)" }
     }()
     
+    // MARK: - View Life Cycle
     public override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         view.addSubview(rootFlexContainer)
-        
+        setSearchController()
         rootFlexContainer.flex.direction(.column).define { flex in
             
             flex.addItem()
@@ -216,6 +218,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 //MARK: - Preview
 @available(iOS 17.0, *)
 #Preview("메인화면", traits: .portrait, body: {
-    MainViewController()
+    UINavigationController(rootViewController: MainViewController())
 })
 

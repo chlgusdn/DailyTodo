@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 우선순위가 지정되어있는 콜렉션 뷰에 대한 셀
 public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellConfigureable {
     
     public typealias T = String
@@ -15,6 +16,7 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellCon
         return String(describing: self)
     }
     
+    /// 서브 뷰를 담을 컨테이너 뷰
     private let rootFlexContainer = UIView().then {
         $0.layer.cornerRadius = 16
         $0.layer.shadowOpacity = 0.2
@@ -25,19 +27,16 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellCon
         $0.backgroundColor = .white
     }
     
+    /// 할일 제목 레이블
     private let titleLabel = UILabel().then {
         $0.text = "일본어 공부하기"
         $0.font = UIFont.systemFont(ofSize: 14, weight: .heavy)
     }
     
+    /// 태그 화면
     private let tagView = TagView()
     
-    private let tagContainerStackView = UIStackView().then {
-        $0.axis = .horizontal
-        $0.distribution = .fillEqually
-        $0.spacing = 11
-    }
-    
+    /// 리마인더 레이블
     private let reminderLabel = UILabel().then {
         $0.text = "⏰ 오전 12시 30분"
         $0.font = UIFont.systemFont(ofSize: 10, weight: .heavy)
@@ -48,14 +47,23 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellCon
         
         addSubview(rootFlexContainer)
         
-        tagContainerStackView.addArrangedSubview(tagView)
-        
-        rootFlexContainer.flex.direction(.column)
+        rootFlexContainer.flex
+            .direction(.column)
             .justifyContent(.spaceEvenly)
             .padding(10)
             .define { flex in
                 flex.addItem(titleLabel)
-                flex.addItem(tagContainerStackView).height(16)
+                flex.addItem()
+                    .direction(.row)
+                    .define { flex in
+                        (1...3).forEach { _ in
+                            let tagView = TagView()
+                            flex.addItem(tagView)
+                                .marginRight(4)
+                                .width(40)
+                        }
+                    }
+                
                 flex.addItem(reminderLabel)
             }
     }
@@ -70,7 +78,13 @@ public final class PriorityCardCollectionViewCell: UICollectionViewCell, CellCon
         rootFlexContainer.flex.layout()
     }
     
-    public func configure(data: String) {}
+    
+    
+    /// - Description 셀에대한 데이터 바인딩 함수
+    /// - Parameter data: 셀 데이터
+    public func configure(data: String) {
+        
+    }
 }
 
 

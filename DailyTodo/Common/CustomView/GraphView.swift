@@ -7,9 +7,13 @@
 
 import UIKit
 
+/// 우선 순위 화면
 public final class GraphView: UIView {
+    
+    /// FlexLayout에 사용될 컨테이너 화면
     private let rootFlexContainer = UIView()
     
+    /// 우선순위를 표시할 리스트화면
     private var graphViewList:[UIView] = {
         return (0...2).map { index in
             var cellView = UILabel().then {
@@ -21,6 +25,7 @@ public final class GraphView: UIView {
         }
     }()
     
+    /// 우선순위 갯수를 바인딩할 initalizer
     public init(count: Int) {
         super.init(frame: .zero)
         
@@ -58,6 +63,7 @@ public final class GraphView: UIView {
     
 }
 
+//MARK: - PreView
 @available(iOS 17.0, *)
 #Preview(traits: .fixedLayout(width: 300, height: 20), body: {
     GraphView()

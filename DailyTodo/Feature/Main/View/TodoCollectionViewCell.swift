@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 할일 목록 콜렉션 뷰
 public final class TodoCollectionViewCell: UICollectionViewCell, CellConfigureable {
     public typealias T = String
     
