@@ -41,6 +41,7 @@ public final class MainViewController: BaseViewController {
         collectionViewLayout: makeCompositionalLayout()
     ).then {
         $0.showsVerticalScrollIndicator = false
+        
         $0.register(
             TodoCollectionViewCell.self,
             forCellWithReuseIdentifier: TodoCollectionViewCell.identifier
@@ -50,11 +51,14 @@ public final class MainViewController: BaseViewController {
             PriorityCardCollectionViewCell.self,
             forCellWithReuseIdentifier: PriorityCardCollectionViewCell.identifier
         )
+        
+        $0.backgroundView = list.isEmpty ? EmptyView() : nil
     }
     
     //FIXME: 제거예정
     private var list: [String] = {
         return (0...10).map { "Todo \($0)" }
+//        return []
     }()
     
     // MARK: - View Life Cycle
