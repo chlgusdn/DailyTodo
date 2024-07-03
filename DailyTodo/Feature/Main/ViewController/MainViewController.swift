@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 /// Main화면에 대한 ViewController 클래스 입니다.
 public final class MainViewController: BaseViewController {
@@ -52,8 +53,11 @@ public final class MainViewController: BaseViewController {
             forCellWithReuseIdentifier: PriorityCardCollectionViewCell.identifier
         )
         
-        $0.backgroundView = list.isEmpty ? EmptyView() : nil
+        $0.backgroundView = list.isEmpty ? emptyView : nil
     }
+    
+    /// 메인 화면에 데이터가 없을 경우 보여질 빈 화면
+    private var emptyView = EmptyView()
     
     //FIXME: 제거예정
     private var list: [String] = {
@@ -90,6 +94,13 @@ public final class MainViewController: BaseViewController {
             
             flex.addItem(collectionView).grow(1)
         }
+        
+        //FIXME: subscribe구문이 실행되지않음. 수정 필요
+        emptyView.createTodoPublished
+            .subscribe(onNext: {
+                print("tapped")
+            })
+            .disposed(by: disposeBag)
     }
     
     public override func viewDidLayoutSubviews() {

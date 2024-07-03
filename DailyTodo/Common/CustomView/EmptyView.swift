@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
+
 /// 할일 목록이 없을 경우 보여질 화면입니다.
 final class EmptyView: UIView {
     /// 클릭 이벤트를 적용할 뷰 화면
-    private let makeTodoControlView = UIControl()
+    private lazy var makeTodoControlView = UIControl()
     
     /// 할일 생성 Prefix 레이블
     private let titleLabel = UILabel().then {
@@ -30,8 +33,36 @@ final class EmptyView: UIView {
     
     private let rootFlexContainerView = UIView()
     
+    /// 할일 만들기 화면 클릭 시 바인딩될 릴레이 객체
+    public var createTodoPublished = PublishRelay<Void>()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUpUI()
+    }
+
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        rootFlexContainerView.pin.all()
+        rootFlexContainerView.flex.layout()
+    }
+}
+
+extension EmptyView: UILayoutable {
+    func setProperty() {
+        makeTodoControlView.addTarget(
+            self,
+            action: #selector(touchUpInsideMakeTodo),
+            for: .touchUpInside
+        )
+    }
+    
+    func setLayout() {
         addSubview(rootFlexContainerView)
         
         rootFlexContainerView.flex
@@ -54,18 +85,10 @@ final class EmptyView: UIView {
                             )
                     }
             }
-        
-        
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        rootFlexContainerView.pin.all()
-        rootFlexContainerView.flex.layout()
+    @objc func touchUpInsideMakeTodo() {
+        createTodoPublished.accept(())
     }
 }
 

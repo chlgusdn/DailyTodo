@@ -14,6 +14,8 @@
 		B1BAEFC52C344A4B004A16D5 /* UITextField+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BAEFC42C344A4B004A16D5 /* UITextField+Ext.swift */; };
 		B1BAEFC72C345041004A16D5 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BAEFC62C345041004A16D5 /* EmptyView.swift */; };
 		B1BAEFC92C3459A5004A16D5 /* FontDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BAEFC82C3459A5004A16D5 /* FontDesign.swift */; };
+		B1BAEFCC2C345EEE004A16D5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B1BAEFCB2C345EEE004A16D5 /* RxCocoa */; };
+		B1BAEFCE2C345EEE004A16D5 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B1BAEFCD2C345EEE004A16D5 /* RxRelay */; };
 		B1E9BED42BEE597B009A6365 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED32BEE597B009A6365 /* AppDelegate.swift */; };
 		B1E9BED62BEE597B009A6365 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E9BED52BEE597B009A6365 /* SceneDelegate.swift */; };
 		B1E9BEDD2BEE597D009A6365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1E9BEDC2BEE597D009A6365 /* Assets.xcassets */; };
@@ -86,8 +88,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1BAEFCE2C345EEE004A16D5 /* RxRelay in Frameworks */,
 				B1EC82642BF89F6500556A22 /* FlexLayout in Frameworks */,
 				B1EC825E2BF89F4900556A22 /* ReactorKit in Frameworks */,
+				B1BAEFCC2C345EEE004A16D5 /* RxCocoa in Frameworks */,
 				B1EC82672BF89F7100556A22 /* PinLayout in Frameworks */,
 				B1EC82612BF89F5800556A22 /* Then in Frameworks */,
 			);
@@ -267,6 +271,8 @@
 				B1EC82602BF89F5800556A22 /* Then */,
 				B1EC82632BF89F6500556A22 /* FlexLayout */,
 				B1EC82662BF89F7100556A22 /* PinLayout */,
+				B1BAEFCB2C345EEE004A16D5 /* RxCocoa */,
+				B1BAEFCD2C345EEE004A16D5 /* RxRelay */,
 			);
 			productName = DailyTodo;
 			productReference = B1E9BED02BEE597B009A6365 /* DailyTodo.app */;
@@ -345,6 +351,7 @@
 				B1EC825F2BF89F5800556A22 /* XCRemoteSwiftPackageReference "Then" */,
 				B1EC82622BF89F6500556A22 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 				B1EC82652BF89F7100556A22 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				B1BAEFCA2C345EEE004A16D5 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = B1E9BED12BEE597B009A6365 /* Products */;
 			projectDirPath = "";
@@ -586,6 +593,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -615,6 +623,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -747,6 +756,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B1BAEFCA2C345EEE004A16D5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 		B1EC825C2BF89F4900556A22 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactorKit/ReactorKit";
@@ -782,6 +799,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B1BAEFCB2C345EEE004A16D5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1BAEFCA2C345EEE004A16D5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		B1BAEFCD2C345EEE004A16D5 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1BAEFCA2C345EEE004A16D5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
 		B1EC825D2BF89F4900556A22 /* ReactorKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B1EC825C2BF89F4900556A22 /* XCRemoteSwiftPackageReference "ReactorKit" */;
